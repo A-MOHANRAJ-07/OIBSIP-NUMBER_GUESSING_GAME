@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.sql.DriverManager;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
@@ -26,10 +27,13 @@ public class Home {
 	int attempts=0;
 	
 	public Home(){
-		//Creation of the Home page 
+		//Creation of the Home page
+		
+		
+		
 		home = new JFrame();
 		try {
-			home.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:\\Users\\Hariharan S\\Downloads\\number (1).png")))));
+			home.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("C:\\Users\\Mohan\\Downloads\\1009034 (1).jpg")))));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -43,6 +47,7 @@ public class Home {
 		label = new JLabel("Welcome to the Number Guessing Game");
 		label.setBounds(450,20,600,100);
 		label.setFont(new Font("TimesNewRoman",Font.BOLD, 30));
+		
 		
 		rangelabel = new JLabel("Set the Range : ");
 		rangelabel.setBounds(520,220,400,50);
@@ -96,6 +101,12 @@ public class Home {
 		reset.setBackground(Color.RED);
 		reset.setForeground(Color.WHITE);
 		
+		label.setForeground(Color.white);
+		rangelabel.setForeground(Color.white);
+		to.setForeground(Color.white);
+		Answer.setForeground(Color.white);
+		comment.setForeground(Color.white);
+		attemptlabel.setForeground(Color.white);
 		//Creating instance for the random class
 		Random rand = new Random();
 		
